@@ -13,7 +13,7 @@ const Todo = ({ todos, setIsCompleted }) => {
 
     return (
         <div className='text-center container'>
-            {!todos || !todos?.length ? <h4 className='mt-4 text-danger'>No data found !</h4> : <>
+            {!todos || !todos?.length ? <h4 className='mt-4 text-danger'>No data found! <Link className='text-decoration-none ' to={"/add"}>create new</Link></h4> : <>
                 <div style={{ "maxHeight": 300, overflowY: "scroll" }}>
                     <table className="table border">
                         <thead className="thead-dark">
