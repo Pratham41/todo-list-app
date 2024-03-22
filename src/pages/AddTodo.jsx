@@ -6,7 +6,7 @@ const AddTodo = () => {
     const navigate = useNavigate()
     const [seachParams] = useSearchParams()
     const id = seachParams.get("id")
-    const allData = JSON.parse(localStorage.getItem("todoData"))
+    const allData = JSON.parse(localStorage.getItem("todoData")) || []
     const availableData = allData?.find((a) => a.id == String(id))
 
     const [formData, setFormData] = useState({
